@@ -1,0 +1,21 @@
+{
+  "name": "@myolog/libs",
+  "version": "0.0.1",
+  "description": "libs for myolog",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "**/*.ts"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "N_Joy_Shadow",
+  "license": "MIT",
+  "peerDependencies": {
+    "astro": ">=5.5.0"
+  }
+}
