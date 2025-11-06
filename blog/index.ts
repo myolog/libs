@@ -1,0 +1,1 @@
+export { default as MyoSEO} from "./seo"
