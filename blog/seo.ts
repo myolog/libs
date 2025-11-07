@@ -2,9 +2,13 @@ import type { Props as SeoProps } from "astro-seo";
 import { MyoObj, MyoDate } from "@myolog/libs";
 import { type BlogProps } from "@myolog/markdown";
 
-export default class {
-    static BlogSEO(): SeoProps { 
+export default class MyoLogSEO {
+    static BlogSEO(props: BlogProps ): SeoProps { 
         return MyoSEOBuilder.make()
+            .setImage(props.heroImage)
+            .setTitle(props.title)
+            .setDescription(props.description)
+            .setPublishTime(props.pubDate)
             .build()
             
     } 
@@ -12,7 +16,7 @@ export default class {
 
 export class MyoSEOBuilder {
     private _title?: string
-    private _image?: string
+    private _image?: string | undefined
     private _description?: string
     private _tags?: string[]
     private _publishedTime?: string | undefined
@@ -35,7 +39,7 @@ export class MyoSEOBuilder {
         return this
     }
 
-    setImage(image: string) {
+    setImage(image: string | undefined) {
         this._image = image
         return this
     }
