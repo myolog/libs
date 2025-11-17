@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "libs for myolog",
   "type": "module",
-  "exports": {
-    "./blog": "./blog/index.ts",
+  "exports": {    
     "./astro": "./astro/index.ts",
     ".": "./index.ts"
   },

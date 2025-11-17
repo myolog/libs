@@ -8,9 +8,8 @@ export default class MyoLogSEO {
             .setImage(props.heroImage)
             .setTitle(props.title)
             .setDescription(props.description)
-            .setPublishTime(props.pubDate)
+            .setPublishTime(props.publishTime)
             .build()
-            
     } 
 }
 
