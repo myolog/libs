@@ -1,7 +1,8 @@
 import { getCollection, type CollectionKey } from "astro:content"
-import { MyoCollection } from "@myolog/libs"
 import { Collections } from "@myolog/markdown"
 import { CategoryData } from "@myolog/markdown/data"
+import MyoCollection from "./collection"
+
 
 export default class {
     private static pathDepth = ["category", "content", "slug"]

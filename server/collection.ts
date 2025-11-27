@@ -1,5 +1,3 @@
-import MyoFiles from "../files"
-
 export default class MyoCollection { 
 	static categories: Record<string, { contents:string [],articles: string[]} > = {}
 	static contents: Record<string, Record<string, string[]>> = {}
@@ -22,13 +20,17 @@ export default class MyoCollection {
 
 		const blob = path.split('/')
 		if(blob.length < 3) {
-			 throw Error("categories/{category}/{content} 구조여야 합니다!")
+			console.log(("categories/{category}/{content} 구조여야 합니다!"))
+
+			this._category = ""
+			this._content = ""
+			this._articles = []
+			return
 		}
 
 		this._category = blob[1] as string
 		this._content = blob[2] as string
-		this._articles = MyoFiles.listMDFilenamesByMTime(MyoFiles.getMDFolder(path))
-		
+		this._articles = []
 		if(!MyoCollection.categories[this.category]) {
 			MyoCollection.categories[this.category] = {
 				contents: [this._content],

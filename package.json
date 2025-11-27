@@ -4,8 +4,9 @@
   "description": "libs for myolog",
   "type": "module",
   "exports": {    
+    ".": "./index.ts",
     "./astro": "./astro/index.ts",
-    ".": "./index.ts"
+    "./server": "./server/index.ts"
   },
   "files": [
     "index.ts",
